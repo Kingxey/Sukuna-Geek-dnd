@@ -21,29 +21,29 @@ def is_enabled(value, default):
 PORT = environ.get("PORT", "8080")
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '') 
-BOT_TOKEN = environ.get('BOT_TOKEN', '') 
+API_ID = int(environ.get('API_ID', '24817837'))
+API_HASH = environ.get('API_HASH', 'acd9f0cc6beb08ce59383cf250052686') 
+BOT_TOKEN = environ.get('BOT_TOKEN', '7784716485:AAH8gr-Vey-dA_cSHoar7oV8lRX1laagRT4') 
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 800))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS' ,'https://graph.org/file/01ddfcb1e8203879a63d7.jpg https://graph.org/file/d69995d9846fd4ad632b8.jpg https://graph.org/file/a125497b6b85a1d774394.jpg https://graph.org/file/43d26c54d37f4afb830f7.jpg https://graph.org/file/60c1adffc7cc2015f771c.jpg https://graph.org/file/d7b520240b00b7f083a24.jpg https://graph.org/file/0f336b0402db3f2a20037.jpg https://graph.org/file/39cc4e15cad4519d8e932.jpg https://graph.org/file/d59a1108b1ed1c6c6c144.jpg https://te.legra.ph/file/3a4a79f8d5955e64cbb8e.jpg https://graph.org/file/d69995d9846fd4ad632b8.jpg')).split()
+PICS = (environ.get('PICS' ,'https://iili.io/375PLcN.md.jpg https://iili.io/375P93B.md.jpg https://iili.io/375rAjj.md.jpg https://iili.io/375gbBp.md.jpg https://iili.io/377dsfI.md.jpg https://iili.io/3772qOb.md.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
 # Admins, Channels & Users
 CACHE_TIME = int(environ.get('CACHE_TIME', 800)) 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5814104129 1687928453 hyoshdesign').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7428552084 1687928453 kingcey').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5814104129 1687928453').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '7428552084 1687928453').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1002049629020')
-auth_grp = environ.get('AUTH_GROUP', '-1002293866874 -1002229122792 -1002165407793')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002202721408')
+auth_grp = environ.get('AUTH_GROUP', '-1002427882015')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URL', "")
+DATABASE_URI = environ.get('DATABASE_URL', "mongodb+srv://Ethan:Ethan123@telegrambots.lva9j.mongodb.net/?retryWrites=true&w=majority&appName=TELEGRAMBOTS")
 DATABASE_NAME = environ.get('DATABASE_NAME', "bot")
 FILE_DB_URL = environ.get("FILE_DB_URL", DATABASE_URI)
 FILE_DB_NAME = environ.get("FILE_DB_NAME", DATABASE_NAME)
@@ -67,7 +67,7 @@ SHORT_API = environ.get("SHORT_API")
 
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "900"))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002049629020))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002376378205))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'hokageclub')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 PM_IMDB = environ.get('PM_IMDB', "True")
